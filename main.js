@@ -28,3 +28,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+ document.getElementById('mobile-menu').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.getElementById('nav-menu').classList.toggle('active');
+});
+        
+// Close menu when clicking a link
+document.querySelectorAll('nav ul li a').forEach(function(link) {
+    link.addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.remove('active');
+        document.getElementById('nav-menu').classList.remove('active');
+    });
+});
